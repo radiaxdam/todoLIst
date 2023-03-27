@@ -1,0 +1,36 @@
+.dashboardHeader{
+
+    background-color: rgb(159, 113, 96);
+    width:100%;
+    height:var(--dashboardHeaderHeight);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+
+}
+
+.leftBar{
+    background-color: antiquewhite;
+    
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    
+}
+.leftBar :nth-child(2){
+                color:rgba(0, 0, 0, 0.34);
+}
+.leftBar .icon{
+    margin-left: 1rem;
+    /* align-self: center; */
+    background-color: red;
+
+}
+
+.rightBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

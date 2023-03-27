@@ -1,0 +1,12 @@
+.workspace{
+    background-color: rgba(179, 62, 62, 0.427);
+    height:calc(100vh - calc( var(--headerHeight) + var(--dashboardHeaderHeight)) );
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding:4rem 2rem ;
+    
+}

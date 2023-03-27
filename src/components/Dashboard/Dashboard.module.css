@@ -1,0 +1,9 @@
+.dashboard{
+    height:var(--dashboardHeight);
+    width:var(--dashboardWidth);
+
+    background-color: #7aacc5;
+    display: flex;
+    flex-direction: column;
+    
+}

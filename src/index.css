@@ -1,0 +1,39 @@
+@font-face {
+  font-family: vorkursLight;
+  src: url("./../iivorkurs/II.Vorkurs/II\ Vorkurs\ Light.ttf");
+}
+@font-face {
+  font-family: vorkursMedium;
+  src: url("./../iivorkurs/II.Vorkurs/II\ Vorkurs\ Medium.ttf");
+}
+@font-face {
+  font-family: vorkursBold;
+  src: url("./../iivorkurs/II.Vorkurs/II\ Vorkurs\ Bold.ttf");
+}
+
+
+
+
+:root{
+  --headerHeight:4.5rem;
+  --sidebarWidth:7rem;
+  --dashboardHeight:calc(100vh - var(var(--headerHeight)));
+  --dashboardWidth:calc(var(--sidebarWidth) + 60vw);
+  --dashboardHeaderHeight:3rem;
+  --itemMinHeight:10rem;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: vorkursMedium;
+  outline: none;
+  
+}
+
+body{
+  background-color: azure;
+}
+
+

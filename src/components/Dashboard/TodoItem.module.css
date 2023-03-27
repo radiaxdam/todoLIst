@@ -1,0 +1,59 @@
+.item{
+    min-width:20%;
+    border-radius: 1rem;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:1rem;
+    min-height: var(--itemMinHeight);
+    margin:1rem 0rem;
+    position: relative;
+}
+
+
+.itemFooter{
+    
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+}
+
+.itemFooter span{
+    opacity: 0.5;
+}
+
+
+.itemFooterIcon{
+    stroke-width:2;
+    align-self:flex-end;
+}
+
+
+
+.options{
+        background-color: red;
+        position:absolute;  
+        width:100%;
+        height:100%;
+        border-radius: 10%;
+        display: flex;
+        flex-flow :column nowrap;
+        justify-content: space-around;
+        left:0;
+        top:0;
+        visibility: hidden;
+       /* opacity: 0.6; */
+}
+
+
+
+.options button{
+    font-size: 1.5rem;
+
+        border:none;
+        vertical-align: bottom;
+        
+}

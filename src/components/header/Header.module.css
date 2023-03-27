@@ -1,0 +1,91 @@
+
+
+  
+
+.header{
+    width:100vw;
+    background-color:antiquewhite;
+    height: var(--headerHeight);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.5rem;
+}
+
+.vB{
+    font-family: vorkursBold;
+}
+
+.fadeHeading{
+    color:rgba(0, 0, 0, 0.455)
+}
+
+.logoContainer{
+    width:4rem;
+    background-color: green;
+    text-align: center;
+    margin-left:1rem;
+    margin-right:2rem;
+}
+
+.logo{
+        width:90%;
+        margin:auto;
+        
+}
+
+
+.leftContainer{
+    background-color: rgba(255, 0, 0, 0.537);
+    display:flex;   
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.head{
+    margin-left:1rem
+}
+
+.rightContainer{
+        background-color:  rgba(255, 0, 0, 0.537);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width:30vw;
+        align-self: stretch;
+        margin-right: 1rem;
+
+}
+
+
+.newButton{
+    background-color: #3aaead;
+    border-radius: 50px;
+    color:white;
+    padding:1rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    box-shadow: 0rem 0.2rem 2px  #3aaead ;
+}
+
+
+.options{
+    background-color: red;
+    margin-right: 2rem  ;
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    font-size: 3rem;
+    padding:0.4rem;
+ 
+    border :1px solid #f1f1f1;
+    border-radius: 50px;
+    margin-right: 1rem;
+}
+
+
