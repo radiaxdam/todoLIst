@@ -30,7 +30,14 @@
 
 .rightBar{
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
 }
 
+
+.addButton{
+    margin:0rem 1rem ;
+    padding:1rem;
+    background-color: aqua;
+    border-radius: 50px;
+}

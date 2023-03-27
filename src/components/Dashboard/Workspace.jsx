@@ -1,27 +1,24 @@
-import React from 'react'
+import React, { useState ,useEffect } from 'react'
 import TodoItem from './TodoItem'
 import style from './Workspace.module.css'
 
 
 
-const Workspace = () => {
+
+const Workspace = (props) => {
+
+
   return (
 
     <div className={style.workspace}>
-      <TodoItem/>
-      <TodoItem/>
-      <TodoItem/>
-      <TodoItem/>
-      <TodoItem/>
-      <TodoItem/>
-      <TodoItem/>
-      <TodoItem/>
-      <TodoItem/>
-      <TodoItem/>
-      <TodoItem/>
-      <TodoItem/>
-      <TodoItem/>
-      <TodoItem/>
+
+     {
+      Object.keys(props.data).map((item)=>{
+        return <TodoItem key={item} id={item}  data = {props.data} setData = {props.setData} workName={props.data[item].workName}  />
+      })
+      // console.log(Object.keys(props.data))
+     }
+
     </div>
 
         )

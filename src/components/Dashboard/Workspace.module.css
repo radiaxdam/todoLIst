@@ -3,7 +3,7 @@
     height:calc(100vh - calc( var(--headerHeight) + var(--dashboardHeaderHeight)) );
     width:100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     align-items: flex-start;
     overflow-y: scroll;

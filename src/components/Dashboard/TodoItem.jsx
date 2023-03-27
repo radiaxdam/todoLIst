@@ -3,6 +3,7 @@ import style from './TodoItem.module.css'
 import {BiDotsHorizontalRounded} from 'react-icons/bi'
 import {AiFillDelete} from 'react-icons/ai'
 import {MdDriveFileRenameOutline,MdOutlineKeyboardBackspace} from 'react-icons/md'
+import produce from 'immer';
 
 const TodoItem = (props) => {
     
@@ -26,12 +27,48 @@ const TodoItem = (props) => {
 
         
     }
-    
 
+
+    const handleDelete = (e)=>{
+      let conf = confirm("click to delete")
+      if (conf) {
+          localStorage.setItem('data',JSON.stringify(
+            produce(props.data,draft=>{
+                  
+                delete  draft[props.id];
+            })
+          ));
+          props.setData(JSON.parse(localStorage.getItem('data')));
+            console.log("delete run hogya");
+
+      toggleOptions(e);
+      e.stopPropagation();
+
+      
+
+    }}
+
+    const handleRename=(e)=>{
+      let rename = prompt("Rename", props.workName);
+    
+      if (rename != null) {
+          localStorage.setItem('data',JSON.stringify(
+            produce(props.data,draft=>{
+                  
+                  draft[props.id]['workName'] = rename
+            })
+          ));
+          props.setData(JSON.parse(localStorage.getItem('data')));
+      
+
+      toggleOptions(e);
+      e.stopPropagation();
+    }
+  }
   return (
     <div className={style.item}  >
        <h3 className={style.title}>
-            first work first work
+            {props.workName}
        </h3>
         
         <div className={style.itemFooter}>
@@ -40,9 +77,13 @@ const TodoItem = (props) => {
         </div>
 
         <div className={style.options} onClick={(e)=>toggleOptions(e)}  ref={optionRef}  >
-            <button>Rename <MdDriveFileRenameOutline/> </button>
+            <button onClick={(e)=>{
+              handleRename(e);
+            }} >Rename <MdDriveFileRenameOutline/> </button>
             <button>Back <MdOutlineKeyboardBackspace/> </button>
-            <button>Delete <AiFillDelete/> </button>
+            <button onClick = {(e)=>{
+              handleDelete(e);
+            }} >Delete <AiFillDelete/> </button>
         </div>
 
 

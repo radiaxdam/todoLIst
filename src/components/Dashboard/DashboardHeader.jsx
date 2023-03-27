@@ -1,12 +1,32 @@
-import React from 'react'
+import React , {useState,useEffect} from 'react'
 import style from './DashboardHeader.module.css';
 import {TbGridDots} from 'react-icons/tb';
 import {FaBars} from 'react-icons/fa';
 import RightBarOptions from './RightBarOption';
+import uniqid from 'uniqid'
+import produce from 'immer'
 
 
 
-const DashboardHeader = () => {
+const DashboardHeader = (props) => {
+
+  const handleAdd = (e)=>{
+    let work = prompt("Enter Work", "eg. Learn Arrays");
+    if (work != null) {
+        localStorage.setItem('data',JSON.stringify(
+          produce(props.data,draft=>{
+            draft[uniqid.process()] = {
+              workName:work
+            }
+          })
+        ));
+        props.setData(JSON.parse(localStorage.getItem('data')));
+    }
+
+    e.stopPropagation();
+  }
+  
+
   return (
   <div className={style.dashboardHeader}>
   <div className={style.leftBar}>
@@ -15,6 +35,9 @@ const DashboardHeader = () => {
 
   </div>
   <div className={style.rightBar}>
+  <button className={style.addButton} onClick={(e)=>{
+    handleAdd(e);
+  }} >Add Work </button>
   <RightBarOptions/>
   <RightBarOptions/>
   <RightBarOptions/>
@@ -26,4 +49,4 @@ const DashboardHeader = () => {
   )
 }
 
-export default DashboardHeader
+export default DashboardHeader;
