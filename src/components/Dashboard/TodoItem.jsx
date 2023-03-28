@@ -72,7 +72,7 @@ const TodoItem = (props) => {
        </h3>
         
         <div className={style.itemFooter}>
-            <span>2 days ago </span>
+            <span>{props.time} </span>
             <BiDotsHorizontalRounded onClick={toggleOptions}  className={style.itemFooterIcon}/>
         </div>
 

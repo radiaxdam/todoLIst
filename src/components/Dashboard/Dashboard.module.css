@@ -2,7 +2,7 @@
     height:var(--dashboardHeight);
     width:var(--dashboardWidth);
 
-    background-color: #7aacc5;
+    background-color: #f8fafb;
     display: flex;
     flex-direction: column;
     

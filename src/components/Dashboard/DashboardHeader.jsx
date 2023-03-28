@@ -16,7 +16,9 @@ const DashboardHeader = (props) => {
         localStorage.setItem('data',JSON.stringify(
           produce(props.data,draft=>{
             draft[uniqid.process()] = {
-              workName:work
+              workName:work,
+              time:new Date().toLocaleDateString('en-us', { weekday:"long", month:"short", day:"numeric"}) 
+
             }
           })
         ));

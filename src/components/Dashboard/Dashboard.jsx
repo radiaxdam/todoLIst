@@ -11,7 +11,7 @@ const Dashboard = () => {
 
   useEffect(()=>{
       if(localStorage.getItem('data')==null){
-        localStorage.setItem('data', JSON.stringify({firstWork:{workName:"do arrays"},secondWork:{workName:"do objects"}}));
+        localStorage.setItem('data', JSON.stringify({}));
       }
       setWorkSpaceData(JSON.parse(localStorage.getItem('data')));  
      

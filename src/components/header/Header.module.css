@@ -4,7 +4,7 @@
 
 .header{
     width:100vw;
-    background-color:antiquewhite;
+    background-color:#ffffff;
     height: var(--headerHeight);
     display:flex;
     justify-content: space-between;
@@ -22,7 +22,6 @@
 
 .logoContainer{
     width:4rem;
-    background-color: green;
     text-align: center;
     margin-left:1rem;
     margin-right:2rem;
@@ -36,7 +35,6 @@
 
 
 .leftContainer{
-    background-color: rgba(255, 0, 0, 0.537);
     display:flex;   
     justify-content: space-between;
     align-items: center;
@@ -48,7 +46,6 @@
 }
 
 .rightContainer{
-        background-color:  rgba(255, 0, 0, 0.537);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -71,7 +68,6 @@
 
 
 .options{
-    background-color: red;
     margin-right: 2rem  ;
     align-self: stretch;
     display: flex;

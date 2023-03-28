@@ -1,6 +1,6 @@
 .dashboardHeader{
 
-    background-color: rgb(159, 113, 96);
+    
     width:100%;
     height:var(--dashboardHeaderHeight);
     display: flex;
@@ -11,7 +11,6 @@
 }
 
 .leftBar{
-    background-color: antiquewhite;
     
     font-size: 2.5rem;
     display: flex;
@@ -19,25 +18,27 @@
     
 }
 .leftBar :nth-child(2){
-                color:rgba(0, 0, 0, 0.34);
 }
 .leftBar .icon{
     margin-left: 1rem;
     /* align-self: center; */
-    background-color: red;
 
 }
 
 .rightBar{
     display: flex;
-    align-items: stretch;
+    /* align-items: stretch; */
+    align-items: center;
     justify-content: space-between;
 }
 
 
 .addButton{
-    margin:0rem 1rem ;
+    margin-top:1rem  ;
+    margin-right: 1rem;
+    text-align: center;
+    
     padding:1rem;
-    background-color: aqua;
     border-radius: 50px;
+    
 }

@@ -14,7 +14,7 @@ const Workspace = (props) => {
 
      {
       Object.keys(props.data).map((item)=>{
-        return <TodoItem key={item} id={item}  data = {props.data} setData = {props.setData} workName={props.data[item].workName}  />
+        return <TodoItem key={item} id={item} time={props.data[item].time} data = {props.data} setData = {props.setData} workName={props.data[item].workName}  />
       })
       // console.log(Object.keys(props.data))
      }
